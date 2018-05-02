@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{5AF76B04-A0A5-4387-8C84-CAA551271DA2}|Default">
+  <MonoDevelop.Ide.ItemProperties.MultiplyTable__62453 PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6F9728B5-DBDF-4EB3-BCE3-1ECFDA4AEA40">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.MultiplyTable__62453>
+  <MonoDevelop.Ide.Workbench ActiveDocument="MultiplyTable_62453/ViewController.cs">
+    <Files>
+      <File FileName="MultiplyTable_62453/ViewController.designer.cs" Line="30" Column="1" />
+      <File FileName="MultiplyTable_62453/Main.cs" Line="12" Column="1" />
+      <File FileName="MultiplyTable_62453/ViewController.cs" Line="67" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/cbqa/Desktop/JJRA/MultiplyTable_62453/MultiplyTable_62453/ViewController.cs" relfile="MultiplyTable_62453/ViewController.cs" line="100" column="1" />
+      <Breakpoint file="/Users/cbqa/Desktop/JJRA/MultiplyTable_62453/MultiplyTable_62453/ViewController.cs" relfile="MultiplyTable_62453/ViewController.cs" line="95" column="1" />
+      <Breakpoint file="/Users/cbqa/Desktop/JJRA/MultiplyTable_62453/MultiplyTable_62453/ViewController.cs" relfile="MultiplyTable_62453/ViewController.cs" line="66" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
