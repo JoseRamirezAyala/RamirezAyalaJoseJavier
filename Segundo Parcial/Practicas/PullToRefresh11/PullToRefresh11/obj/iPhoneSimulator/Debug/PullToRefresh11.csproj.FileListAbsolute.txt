@@ -1,0 +1,12 @@
+/Users/ISSC611/Documents/JJRA/PullToRefresh11/PullToRefresh11/bin/iPhoneSimulator/Debug/PullToRefresh11.exe
+/Users/ISSC611/Documents/JJRA/PullToRefresh11/PullToRefresh11/bin/iPhoneSimulator/Debug/PullToRefresh11.pdb
+/Users/ISSC611/Documents/JJRA/PullToRefresh11/PullToRefresh11/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
+/Users/ISSC611/Documents/JJRA/PullToRefresh11/PullToRefresh11/bin/iPhoneSimulator/Debug/Newtonsoft.Json.xml
+/Users/ISSC611/Documents/JJRA/PullToRefresh11/PullToRefresh11/obj/iPhoneSimulator/Debug/device-builds/iphone10.3-11.2/ibtool/_BundleResourceWithLogicalName.items
+/Users/ISSC611/Documents/JJRA/PullToRefresh11/PullToRefresh11/obj/iPhoneSimulator/Debug/device-builds/iphone10.3-11.2/actool/_PartialAppManifest.items
+/Users/ISSC611/Documents/JJRA/PullToRefresh11/PullToRefresh11/obj/iPhoneSimulator/Debug/device-builds/iphone10.3-11.2/actool/_BundleResourceWithLogicalName.items
+/Users/ISSC611/Documents/JJRA/PullToRefresh11/PullToRefresh11/obj/iPhoneSimulator/Debug/device-builds/iphone10.3-11.2/optimized/
+/Users/ISSC611/Documents/JJRA/PullToRefresh11/PullToRefresh11/obj/iPhoneSimulator/Debug/PullToRefresh11.csproj.CoreCompileInputs.cache
+/Users/ISSC611/Documents/JJRA/PullToRefresh11/PullToRefresh11/obj/iPhoneSimulator/Debug/PullToRefresh11.exe
+/Users/ISSC611/Documents/JJRA/PullToRefresh11/PullToRefresh11/obj/iPhoneSimulator/Debug/PullToRefresh11.pdb
+/Users/ISSC611/Documents/JJRA/PullToRefresh11/PullToRefresh11/obj/iPhoneSimulator/Debug/PullToRefresh11.csprojResolveAssemblyReference.cache
