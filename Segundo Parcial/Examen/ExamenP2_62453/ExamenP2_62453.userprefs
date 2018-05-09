@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{D1EB1B1E-943A-4A2E-8AAD-6079A9C3C03D}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ExamenP2_62453/Controllers/TwitterViewController.cs">
+    <Files>
+      <File FileName="ExamenP2_62453/AppDelegate.cs" Line="39" Column="10" />
+      <File FileName="ExamenP2_62453/Controllers/ViewController.cs" Line="15" Column="41" />
+      <File FileName="ExamenP2_62453/Main.cs" Line="12" Column="1" />
+      <File FileName="ExamenP2_62453/Main.storyboard" />
+      <File FileName="ExamenP2_62453/Controllers/CustomTableViewCell.cs" Line="44" Column="10" />
+      <File FileName="ExamenP2_62453/Models/Twitter.cs" Line="21" Column="40" />
+      <File FileName="ExamenP2_62453/Models/Tweet.cs" Line="9" Column="17" />
+      <File FileName="ExamenP2_62453/Controllers/CustomTableViewCell.designer.cs" Line="1" Column="1" />
+      <File FileName="ExamenP2_62453/Controllers/TwitterViewController.cs" Line="89" Column="13" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ExamenP2__62453 PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.31DBC262-5A47-45C5-A14E-3A2DB3777022">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.ExamenP2__62453>
+</Properties>
