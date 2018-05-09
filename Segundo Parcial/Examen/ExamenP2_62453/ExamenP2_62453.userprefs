@@ -6,10 +6,10 @@
       <File FileName="ExamenP2_62453/Main.cs" Line="12" Column="1" />
       <File FileName="ExamenP2_62453/Main.storyboard" />
       <File FileName="ExamenP2_62453/Controllers/CustomTableViewCell.cs" Line="44" Column="10" />
-      <File FileName="ExamenP2_62453/Models/Twitter.cs" Line="21" Column="40" />
+      <File FileName="ExamenP2_62453/Models/Twitter.cs" Line="37" Column="49" />
       <File FileName="ExamenP2_62453/Models/Tweet.cs" Line="9" Column="17" />
       <File FileName="ExamenP2_62453/Controllers/CustomTableViewCell.designer.cs" Line="1" Column="1" />
-      <File FileName="ExamenP2_62453/Controllers/TwitterViewController.cs" Line="89" Column="13" />
+      <File FileName="ExamenP2_62453/Controllers/TwitterViewController.cs" Line="122" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

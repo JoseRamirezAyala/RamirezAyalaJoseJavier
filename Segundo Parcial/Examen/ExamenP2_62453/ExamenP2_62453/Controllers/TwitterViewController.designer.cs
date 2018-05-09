@@ -13,8 +13,16 @@ namespace ExamenP2_62453
     [Register ("TwitterViewController")]
     partial class TwitterViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UISearchDisplayController searchDisplayController { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (searchDisplayController != null) {
+                searchDisplayController.Dispose ();
+                searchDisplayController = null;
+            }
         }
     }
 }

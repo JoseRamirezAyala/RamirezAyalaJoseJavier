@@ -10,14 +10,30 @@ namespace ExamenP2_62453.Models
     {
         #region Variables
         Tweet tweet;
+        SingleUserAuthorizer auth = new SingleUserAuthorizer
+        {
+
+            CredentialStore = new SingleUserInMemoryCredentialStore()
+            {
+
+                ConsumerKey = "cuIC1tAM7CfI2tSAKNwZmrb8O",
+                ConsumerSecret = "G3JbDyMUrwCpJrHHfwj6nY9pa2NJ3DtIE6nCRor8yEQk4bcyja",
+                AccessToken = "161139379-AFXix34IfTSsFVJihRVsycNkEZICJEYXG7gSKcvf",
+                AccessTokenSecret = "lfmvdCIjKXujBBvHWFvwwTUgZIwY9EQsJRs9aWTF5bwOC"
+
+            }
+
+        };
         #endregion
         #region Constructors
         public Twitter()
         {
         }
         #endregion
-
-
+        public async Task Authorize()
+        {
+            await auth.AuthorizeAsync();
+        }
         public async Task<List<Tweet>> GetTweets(string query){
             try
             {
@@ -25,30 +41,15 @@ namespace ExamenP2_62453.Models
 
 
 
-                var auth = new SingleUserAuthorizer
-                {
 
-                    CredentialStore = new SingleUserInMemoryCredentialStore()
-                    {
-
-                        ConsumerKey = "cuIC1tAM7CfI2tSAKNwZmrb8O",
-                        ConsumerSecret = "G3JbDyMUrwCpJrHHfwj6nY9pa2NJ3DtIE6nCRor8yEQk4bcyja",
-                        AccessToken = "161139379-AFXix34IfTSsFVJihRVsycNkEZICJEYXG7gSKcvf",
-                        AccessTokenSecret = "lfmvdCIjKXujBBvHWFvwwTUgZIwY9EQsJRs9aWTF5bwOC"
-
-                    }
-
-                };
-                await auth.AuthorizeAsync();
                 var twitterCtx = new TwitterContext(auth);
 
-                var srch =
+                var srch = await
                 (from search in twitterCtx.Search
                  where search.Type == SearchType.Search &&
-                       search.Query == query &&
-                       search.Count == 50
+                       search.Query == query
                  select search)
-                .SingleOrDefault();
+                    .SingleAsync();
 
                 Console.WriteLine("\nQuery: {0}\n", srch.SearchMetaData.Query);
                 srch.Statuses.ForEach(entry =>

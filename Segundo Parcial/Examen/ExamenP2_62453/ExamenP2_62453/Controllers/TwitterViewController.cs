@@ -3,6 +3,8 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
+using System.Threading;
+using System.Threading.Tasks;
 using ExamenP2_62453.Models;
 using Foundation;
 using UIKit;
@@ -15,6 +17,7 @@ namespace ExamenP2_62453
         UISearchController searchController;
         Models.Twitter twitter;
         List<Tweet> tweets = new List<Tweet>();
+        CancellationTokenSource cancellationTokenSource;
         #endregion
         #region Constructors
         public TwitterViewController(IntPtr handle) : base(handle)
@@ -33,16 +36,34 @@ namespace ExamenP2_62453
         #region Table Data Source
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
-            Contract.Ensures(Contract.Result<UITableViewCell>() != null);
             var cell = tableView.DequeueReusableCell(CustomTableViewCell.Key, indexPath) as CustomTableViewCell;
-                
-                cell.Tweet = $"{tweets[indexPath.Row].Text}";
-                cell.ReTweet = $"{tweets[indexPath.Row].ReTweets}";
-                cell.Fav = $"{tweets[indexPath.Row].Favorite}";
+            try
+            {
+                Contract.Ensures(Contract.Result<UITableViewCell>() != null);
+                if (tweets.Count > 0)
+                {
+
+
+                    cell.Tweet = $"{tweets[indexPath.Row].Text}";
+                    cell.ReTweet = $"{tweets[indexPath.Row].ReTweets}";
+                    cell.Fav = $"{tweets[indexPath.Row].Favorite}";
+                    cell.IndexPath = indexPath;
+
+                }
+                else
+                {
+                    
+                }
+                return cell;
+            }catch(Exception ex)
+            {
+                cell.Tweet = "";
+                cell.ReTweet = "";
+                cell.Fav = "";
                 cell.IndexPath = indexPath;
-               
-            
-            return cell;
+                return cell;
+            }
+
 
         }
         public override nint RowsInSection(UITableView tableView, nint section)
@@ -73,22 +94,44 @@ namespace ExamenP2_62453
                 DimsBackgroundDuringPresentation = false
             };
             twitter = new Models.Twitter();
-
+            AuthorizeAsync();
             GetTweetsAsync("MTB XC");
             TableView.ReloadData();
             TableView.TableHeaderView = searchController.SearchBar;
+            TableView.RowHeight = UITableView.AutomaticDimension;
+            TableView.EstimatedRowHeight = 100f;
+            searchController.SearchBar.SearchButtonClicked += SearchBar_SearchButtonClicked;
 
+        }
+        async void AuthorizeAsync()
+        {
+            await twitter.Authorize();
         }
         async void GetTweetsAsync(string query)
         {
             tweets = await twitter.GetTweets(query);
         }
 
+        void SearchBar_SearchButtonClicked(object sender, EventArgs e)
+        {
+            if (searchController.SearchBar.Text != " ")
+            {
+
+                    GetTweetsAsync(searchController.SearchBar.Text);
+                    TableView.ReloadData();
+            }
+        }
+        void ShowGenericAlert(string title, string content)
+        {
+            var alert = UIAlertController.Create(title, content, UIAlertControllerStyle.Alert);
+            alert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+            PresentViewController(alert, true, null);
+
+        }
+
         public void UpdateSearchResultsForSearchController(UISearchController searchController)
         {
-
-            GetTweetsAsync(searchController.SearchBar.Text);
-            TableView.ReloadData();
+            
         }
         #endregion
 
